@@ -1,0 +1,222 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-background-images {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.home-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7);
+}
+
+.home-background-image:first-child {
+  opacity: 1;
+}
+
+.home-background-image.active {
+  opacity: 1;
+}
+
+.home-scroll-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.home-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.home-cta-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 2rem 8rem;
+  text-align: center;
+}
+
+.cta-slogan {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  max-width: 600px;
+  line-height: 1.4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.btn-cta-large {
+  font-size: 1.8rem;
+  padding: 1.5rem 4rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 25px rgba(255, 107, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-cta-large:hover {
+  background: #ff7f00;
+  box-shadow: 0 10px 40px rgba(255, 107, 0, 0.5);
+}
+
+.btn-cta-large:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.home-content-wrapper {
+  min-height: 300vh;
+  position: relative;
+}
+
+.home-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.home-title {
+  font-size: calc(var(--font-size-base) * 5);
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 98, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.home-subtitle {
+  font-size: calc(var(--font-size-base) * 2);
+  color: var(--color-accent);
+  margin-bottom: 3rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.home-content-sections {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-bottom: 4rem;
+}
+
+.content-left,
+.content-right {
+  max-width: 700px;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 98, 0, 0.2);
+}
+
+.content-left {
+  margin-right: auto;
+  margin-left: 2rem;
+  border-left: 4px solid var(--color-primary);
+}
+
+.content-right {
+  margin-left: auto;
+  margin-right: 2rem;
+  border-right: 4px solid var(--color-accent);
+}
+
+.content-left h3,
+.content-right h3 {
+  font-size: calc(var(--font-size-base) * 1.8);
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.content-right h3 {
+  color: var(--color-accent);
+}
+
+.content-left p,
+.content-right p {
+  font-size: calc(var(--font-size-base) * 1.05);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .content-left,
+  .content-right {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content-wrapper {
+    min-height: 350vh;
+  }
+
+  .home-hero {
+    min-height: 100vh;
+    padding: 0 1rem;
+  }
+
+  .home-title {
+    font-size: calc(var(--font-size-base) * 3);
+  }
+
+  .home-subtitle {
+    font-size: calc(var(--font-size-base) * 1.4);
+  }
+
+  .home-content-sections {
+    gap: 4rem;
+    padding: 2rem 1rem;
+  }
+
+  .content-left,
+  .content-right {
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .content-left h3,
+  .content-right h3 {
+    font-size: calc(var(--font-size-base) * 1.4);
+  }
+}
