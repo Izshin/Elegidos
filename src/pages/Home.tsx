@@ -32,7 +32,7 @@ const Home = () => {
 
       // La última imagen solo se muestra al final (cuando se ve el botón de contratanos)
       // Usamos un umbral alto (0.9) para reservar la última foto para el final
-      const threshold = 0.95;
+      const threshold = 0.92;
       let imageIndex;
 
       if (scrollPercentage > threshold) {
