@@ -21,7 +21,7 @@
 }
 
 .footer-section h4 {
-  color: var(--color-accent);
+  color: var(--color-primary);
   margin-bottom: 1rem;
   font-size: calc(var(--font-size-base) * 1.1);
 }

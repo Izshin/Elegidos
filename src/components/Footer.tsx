@@ -27,10 +27,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Síguenos</h4>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">Facebook</a>
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="YouTube">YouTube</a>
-              <a href="#" aria-label="Twitter">Twitter</a>
+              <a href="https://www.facebook.com/orquesta.elegidos/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+              <a href="https://www.instagram.com/orquestaelegidos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
             </div>
           </div>
 

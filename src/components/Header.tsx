@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo" onClick={handleLogoClick}>
-            <img src="/images/ElegidosLogo.png" alt="Orquesta Elegidos" className="logo-img" />
+            <img src={import.meta.env.BASE_URL + 'images/ElegidosLogo.png'} alt="Orquesta Elegidos" className="logo-img" />
             <motion.h1
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
@@ -34,8 +34,8 @@ const Header = () => {
               ORQUESTA ELEGIDOS
             </motion.h1>
           </Link>
-          
-          <button 
+
+          <button
             className="menu-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -48,8 +48,8 @@ const Header = () => {
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul>
               <li>
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className={isActive('/') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -57,8 +57,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/orquesta" 
+                <Link
+                  to="/orquesta"
                   className={isActive('/orquesta') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -66,8 +66,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/tour" 
+                <Link
+                  to="/tour"
                   className={isActive('/tour') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -75,8 +75,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/noticias" 
+                <Link
+                  to="/noticias"
                   className={isActive('/noticias') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -84,8 +84,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contacto" 
+                <Link
+                  to="/contacto"
                   className={isActive('/contacto') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >

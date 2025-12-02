@@ -1,3 +1,4 @@
+
 export interface Member {
     id: string;
     image: string;
@@ -13,7 +14,7 @@ export interface Member {
 export const members: Member[] = [
     {
         id: 'carlos-espinosa',
-        image: '/images/Carlos.jpg',
+        image: import.meta.env.BASE_URL + 'images/Carlos.jpg',
         title: 'Carlos Espinosa',
         subtitle: 'Vocalista Principal',
         handle: 'Utrera, 1974',
@@ -24,7 +25,7 @@ export const members: Member[] = [
     },
     {
         id: 'antonio-mofly',
-        image: '/images/Antonio.jpg',
+        image: import.meta.env.BASE_URL + 'images/Antonio.jpg',
         title: 'Antonio Mofly',
         subtitle: 'Batería',
         handle: 'Utrera, 1972',
@@ -35,7 +36,7 @@ export const members: Member[] = [
     },
     {
         id: 'jesuli-gonzalez',
-        image: '/images/Jesuli.png',
+        image: import.meta.env.BASE_URL + 'images/Jesuli.png',
         title: 'Jesuli González',
         subtitle: 'Guitarrista',
         handle: 'Utrera',
@@ -46,7 +47,7 @@ export const members: Member[] = [
     },
     {
         id: 'kiko',
-        image: '/images/Kiko.png',
+        image: import.meta.env.BASE_URL + 'images/Kiko.png',
         title: 'Kiko',
         subtitle: 'Teclista',
         handle: 'Utrera',
@@ -57,7 +58,7 @@ export const members: Member[] = [
     },
     {
         id: 'miguel-navas',
-        image: '/images/Navas.jpg',
+        image: import.meta.env.BASE_URL + 'images/Navas.jpg',
         title: 'Miguel Navas',
         subtitle: 'Vocalista',
         handle: 'El Rubio de Utrera, 1975',
@@ -68,7 +69,7 @@ export const members: Member[] = [
     },
     {
         id: 'sergio-take',
-        image: '/images/Take.jpg',
+        image: import.meta.env.BASE_URL + 'images/Take.jpg',
         title: 'Sergio "Take"',
         subtitle: 'Bajista',
         handle: 'Utrera',

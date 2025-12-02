@@ -7,12 +7,12 @@ const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    '/images/Orquesta-landing.jpg',
-    '/images/Orquesta-landing2.jpg',
-    '/images/Orquesta-landing3.jpg',
-    '/images/Orquesta-landing4.jpg',
-    '/images/Orquesta-landing-5.jpg',
-    '/images/Orquesta-landing-ultima-foto.jpg'
+    import.meta.env.BASE_URL + 'images/Orquesta-landing.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing2.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing3.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing4.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing-5.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing-ultima-foto.jpg'
   ];
 
   useEffect(() => {
