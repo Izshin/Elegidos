@@ -14,17 +14,6 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Enlaces Rápidos</h4>
-            <ul>
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/orquesta">La Orquesta</Link></li>
-              <li><Link to="/tour">Tour</Link></li>
-              <li><Link to="/noticias">Noticias</Link></li>
-              <li><Link to="/contacto">Contáctanos</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
             <h4>Síguenos</h4>
             <div className="social-links">
               <a href="https://www.facebook.com/orquesta.elegidos/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
