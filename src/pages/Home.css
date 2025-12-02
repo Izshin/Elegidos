@@ -42,12 +42,15 @@
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .home-scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .home-cta-footer {
@@ -56,7 +59,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 6rem 2rem 8rem;
+  padding: 50vh 2rem 40vh;
   text-align: center;
 }
 
@@ -97,6 +100,7 @@
 .home-content-wrapper {
   min-height: 300vh;
   position: relative;
+  padding-top: 130px;
 }
 
 .home-hero {
@@ -177,6 +181,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .content-left,
   .content-right {
     max-width: 90%;

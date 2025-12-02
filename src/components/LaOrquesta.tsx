@@ -63,18 +63,11 @@ const LaOrquesta = () => {
   return (
     <section id="orquesta" className="la-orquesta">
       <div className="container">
-        <motion.h2
+        <motion.h3
+          className="section-intro"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-        >
-          La Orquesta
-        </motion.h2>
-        <motion.h3
-          className="section-intro"
-          initial={{ y: -30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
         >
           Conoce a los talentosos músicos que dan vida a Orquesta Elegidos
         </motion.h3>

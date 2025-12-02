@@ -7,12 +7,12 @@ const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    `${import.meta.env.BASE_URL}images/Orquesta landing.jpg`,
-    `${import.meta.env.BASE_URL}images/Orquesta landing2.jpg`,
-    `${import.meta.env.BASE_URL}images/Orquesta landing3.jpg`,
-    `${import.meta.env.BASE_URL}images/Orquesta landing4.jpg`,
-    `${import.meta.env.BASE_URL}images/Orquesta landing 5.jpg`,
-    `${import.meta.env.BASE_URL}images/Orquesta landing ultima foto.jpg`
+    '/images/Orquesta-landing.jpg',
+    '/images/Orquesta-landing2.jpg',
+    '/images/Orquesta-landing3.jpg',
+    '/images/Orquesta-landing4.jpg',
+    '/images/Orquesta-landing-5.jpg',
+    '/images/Orquesta-landing-ultima-foto.jpg'
   ];
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Home = () => {
       
       // La última imagen solo se muestra al final (cuando se ve el botón de contratanos)
       // Usamos un umbral alto (0.9) para reservar la última foto para el final
-      const threshold = 0.9;
+      const threshold = 0.95;
       let imageIndex;
 
       if (scrollPercentage > threshold) {
