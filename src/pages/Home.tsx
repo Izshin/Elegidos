@@ -231,7 +231,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, root: containerRef }}
             >
-              Lleva la música y la felicidad a tu evento
+              Disfruta del arte y la buena música en directo 
             </motion.h3>
             <motion.button
               className="btn btn-cta-large"
