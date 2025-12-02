@@ -14,7 +14,7 @@ const tourDates: TourDate[] = [
     id: 1,
     date: '15 DIC 2025',
     venue: 'Feria de Navidad',
-    location: 'Madrid',
+    location: 'Sevilla',
     eventType: 'Feria'
   },
   {
@@ -66,7 +66,7 @@ const Tour = () => {
         >
           Descubre dónde nos presentaremos próximamente
         </motion.h3>
-        
+
         <div className="tour-list">
           {tourDates.map((show, index) => (
             <motion.div

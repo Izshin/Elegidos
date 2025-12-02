@@ -48,7 +48,7 @@ const Contacto = () => {
         >
           ¿Quieres que toquemos en tu evento? Escríbenos y hagamos realidad tu fiesta perfecta
         </motion.h3>
-        
+
         <div className="contacto-content">
           <motion.div
             className="contacto-info"
@@ -72,7 +72,7 @@ const Contacto = () => {
             <div className="info-item">
               <div>
                 <h4>Ubicación</h4>
-                <p>Madrid, España</p>
+                <p>Andalucía, España</p>
               </div>
             </div>
             <div className="info-item">

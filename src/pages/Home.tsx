@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate = useNavigate();
 
   const images = [
     import.meta.env.BASE_URL + 'images/Orquesta-landing.jpg',
@@ -111,7 +113,7 @@ const Home = () => {
 
             <motion.button
               className="btn btn-primary"
-              onClick={() => window.location.href = '/contacto'}
+              onClick={() => navigate('/contacto')}
               initial={{ y: 20, opacity: 0 }}
               animate={{
                 y: 0,
@@ -231,11 +233,11 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, root: containerRef }}
             >
-              Lleva la música y la felicidad a tu evento
+              Disfruta del arte y la buena música en directo 
             </motion.h3>
             <motion.button
               className="btn btn-cta-large"
-              onClick={() => window.location.href = '/contacto'}
+              onClick={() => navigate('/contacto')}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, root: containerRef }}

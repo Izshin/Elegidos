@@ -1,6 +1,6 @@
 .tour {
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-black) 100%);
-  padding: 6rem 0;
+  padding: 150px 0 6rem;
   min-height: calc(100vh - 100px);
 }
 

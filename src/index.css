@@ -75,12 +75,12 @@ h1 {
 
 h2 {
   font-size: calc(var(--font-size-base) * 2.5);
-  letter-spacing: var(--letter-spacing-h2);
+  letter-spacing: 0.02em;
 }
 
 h3 {
   font-size: calc(var(--font-size-base) * 2);
-  letter-spacing: var(--letter-spacing-h3);
+  letter-spacing: 0.04em;
 }
 
 h4 {
@@ -114,6 +114,7 @@ a:hover {
 section {
   padding: 4rem 0;
   text-align: center;
+  scroll-margin-top: 150px;
 }
 
 /* Buttons */

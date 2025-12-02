@@ -24,7 +24,7 @@ const Footer = () => {
             <h4>Contacto</h4>
             <p>Email: info@orquestaelegidos.com</p>
             <p>Tel: +34 600 123 456</p>
-            <p>Madrid, España</p>
+            <p>Andalucía, España</p>
           </div>
         </div>
 

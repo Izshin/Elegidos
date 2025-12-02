@@ -92,6 +92,16 @@ const Header = () => {
                   Contáctanos
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://camisetaspubliutrera.com/categoria-producto/productos/orquesta-los-elegidos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Merchandising
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

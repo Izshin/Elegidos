@@ -1,6 +1,6 @@
 .contacto {
   background: linear-gradient(135deg, var(--color-black) 0%, var(--color-secondary) 100%);
-  padding: 6rem 0;
+  padding: 150px 0 6rem;
   min-height: calc(100vh - 100px);
 }
 
@@ -47,7 +47,7 @@
 
 .contacto-form {
   background-color: var(--color-black);
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-accent);
   border-radius: 8px;
   padding: 2.5rem;
   text-align: left;
@@ -69,7 +69,7 @@
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-secondary);
   border-radius: 4px;
   background-color: var(--color-black);
   color: var(--color-white);
