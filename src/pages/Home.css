@@ -191,6 +191,11 @@
 }
 
 @media (max-width: 768px) {
+  .home-background-image {
+    background-size: contain;
+    background-position: top center;
+  }
+
   .home-content-wrapper {
     min-height: 350vh;
   }
