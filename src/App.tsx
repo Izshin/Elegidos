@@ -8,6 +8,7 @@ import OrquestaPage from './pages/OrquestaPage'
 import TourPage from './pages/TourPage'
 import NoticiasPage from './pages/NoticiasPage'
 import ContactoPage from './pages/ContactoPage'
+import MemberProfile from './pages/MemberProfile'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/orquesta" element={<OrquestaPage />} />
+              <Route path="/orquesta/:id" element={<MemberProfile />} />
               <Route path="/tour" element={<TourPage />} />
               <Route path="/noticias" element={<NoticiasPage />} />
               <Route path="/contacto" element={<ContactoPage />} />

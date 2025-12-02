@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import './ChromaGrid.css';
 
@@ -11,6 +12,7 @@ export interface ChromaItem {
   borderColor?: string;
   gradient?: string;
   url?: string;
+  id?: string;
 }
 
 export interface ChromaGridProps {
@@ -139,8 +141,12 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
     });
   };
 
-  const handleCardClick = (url?: string) => {
-    if (url) {
+  const navigate = useNavigate();
+
+  const handleCardClick = (url?: string, id?: string) => {
+    if (id) {
+      navigate(`/orquesta/${id}`);
+    } else if (url) {
       window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
@@ -173,12 +179,12 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
           key={i}
           className="chroma-card"
           onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
+          onClick={() => handleCardClick(c.url, c.id)}
           style={
             {
               '--card-border': c.borderColor || 'transparent',
               '--card-gradient': c.gradient,
-              cursor: c.url ? 'pointer' : 'default'
+              cursor: (c.url || c.id) ? 'pointer' : 'default'
             } as React.CSSProperties
           }
         >

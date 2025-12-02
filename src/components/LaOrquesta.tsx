@@ -2,62 +2,7 @@ import { motion } from 'framer-motion';
 import { ChromaGrid, type ChromaItem } from './ChromaGrid';
 import './LaOrquesta.css';
 
-const members: ChromaItem[] = [
-  {
-    image: '/images/Carlos.jpg',
-    title: 'Carlos Espinosa',
-    subtitle: 'Vocalista Principal',
-    handle: 'Utrera, 1974',
-    location: 'Coro Amistad de Utrera',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(145deg, #FF6200, #000000)'
-  },
-  {
-    image: '/images/Antonio.jpg',
-    title: 'Antonio Mofly',
-    subtitle: 'Batería',
-    handle: 'Utrera, 1972',
-    location: 'Jazz & Flamenco',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(165deg, #823F00, #000000)'
-  },
-  {
-    image: '/images/Jesuli.png',
-    title: 'Jesuli González',
-    subtitle: 'Guitarrista',
-    handle: 'Utrera',
-    location: 'Gran suli',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(195deg, #FF6200, #000000)'
-  },
-  {
-    image: '/images/Kiko.png',
-    title: 'Kiko',
-    subtitle: 'Teclista',
-    handle: 'Utrera',
-    location: 'Tecladista Principal',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(210deg, #823F00, #000000)'
-  },
-  {
-    image: '/images/Navas.jpg',
-    title: 'Miguel Navas',
-    subtitle: 'Vocalista',
-    handle: 'El Rubio de Utrera, 1975',
-    location: 'Pop & Flamenco',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(225deg, #FF6200, #000000)'
-  },
-  {
-    image: '/images/Take.jpg',
-    title: 'Sergio "Take"',
-    subtitle: 'Bajista',
-    handle: 'Utrera',
-    location: 'Base Rítmica',
-    borderColor: '#FFDABA',
-    gradient: 'linear-gradient(135deg, #823F00, #000000)'
-  }
-];
+import { members } from '../data/members';
 
 const LaOrquesta = () => {
   return (
@@ -71,10 +16,10 @@ const LaOrquesta = () => {
         >
           Conoce a los talentosos músicos que dan vida a Orquesta Elegidos
         </motion.h3>
-        
-        <ChromaGrid 
+
+        <ChromaGrid
           items={members}
-          radius={280}
+          radius={350}
           columns={3}
           damping={0.5}
           fadeOut={0.7}

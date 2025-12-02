@@ -15,7 +15,7 @@ const Header = () => {
       e.preventDefault();
       const scrollContainer = document.querySelector('.home-scroll-container');
       if (scrollContainer) {
-        scrollContainer.scrollTo({ top: 125, behavior: 'smooth' });
+        scrollContainer.scrollTo({ top: 150, behavior: 'smooth' });
       }
     }
     setIsMenuOpen(false);

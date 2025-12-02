@@ -76,20 +76,20 @@
   font-size: 1.8rem;
   padding: 1.5rem 4rem;
   background: var(--color-accent);
-  color: white;
+  color: black;
   border: none;
-  border-radius: 50px;
+  border-radius: 16px;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 6px 25px rgba(255, 107, 0, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(255, 98, 0, 0.3);
+  transition: all 0.1s ease;
 }
 
 .btn-cta-large:hover {
-  background: #ff7f00;
-  box-shadow: 0 10px 40px rgba(255, 107, 0, 0.5);
+  background: #ffdebd;
+  box-shadow: 0 10px 40px rgba(255, 0, 0, 0.5);
 }
 
 .btn-cta-large:active {
@@ -125,7 +125,7 @@
 
 .home-subtitle {
   font-size: calc(var(--font-size-base) * 2);
-  color: var(--color-accent);
+  color: var(--color-text);
   margin-bottom: 3rem;
   font-weight: 600;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
