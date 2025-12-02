@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChromaGrid, type ChromaItem } from './ChromaGrid';
+import { ChromaGrid } from './ChromaGrid';
 import './LaOrquesta.css';
 
 import { members } from '../data/members';
