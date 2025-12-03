@@ -191,11 +191,6 @@
 }
 
 @media (max-width: 768px) {
-  .home-background-image {
-    background-size: contain;
-    background-position: top center;
-  }
-
   .home-content-wrapper {
     min-height: 350vh;
   }
@@ -220,13 +215,24 @@
 
   .content-left,
   .content-right {
-    padding: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .content-left h3,
   .content-right h3 {
     font-size: calc(var(--font-size-base) * 1.4);
+  }
+
+  .content-left p,
+  .content-right p {
+    font-size: calc(var(--font-size-base) * 0.9);
+  }
+
+  .home-background-image:first-child {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
