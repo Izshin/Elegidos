@@ -78,7 +78,7 @@
   background: var(--color-accent);
   color: black;
   border: none;
-  border-radius: 16px;
+  border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
@@ -89,7 +89,7 @@
 
 .btn-cta-large:hover {
   background: #ffdebd;
-  box-shadow: 0 10px 40px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 10px 40px rgba(255, 89, 0, 0.5);
 }
 
 .btn-cta-large:active {
