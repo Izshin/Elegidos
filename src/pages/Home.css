@@ -216,8 +216,17 @@
   .content-left,
   .content-right {
     padding: 1.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    max-width: 85%;
+  }
+
+  .content-left {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+
+  .content-right {
+    margin-left: auto;
+    margin-right: 1rem;
   }
 
   .content-left h3,
