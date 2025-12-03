@@ -1,46 +1,33 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { fetchFacebookPosts, type NewsItem } from '../services/apifyService';
 import './Noticias.css';
 
-interface NewsItem {
-  id: number;
-  title: string;
-  date: string;
-  excerpt: string;
-  category: string;
-}
-
-const news: NewsItem[] = [
-  {
-    id: 1,
-    title: 'Gran éxito en la Feria de San Isidro',
-    date: '20 NOV 2025',
-    excerpt: 'Miles de personas disfrutaron de nuestro show en la emblemática feria madrileña. Una noche inolvidable llena de rock y pop.',
-    category: 'Eventos'
-  },
-  {
-    id: 2,
-    title: 'Nuevo repertorio de reggaeton latino',
-    date: '15 NOV 2025',
-    excerpt: 'Ampliamos nuestro catálogo con los éxitos más recientes del género urbano, incluyendo Bad Bunny, Karol G y más.',
-    category: 'Música'
-  },
-  {
-    id: 3,
-    title: 'Incorporación de nuevos integrantes',
-    date: '10 NOV 2025',
-    excerpt: 'Damos la bienvenida a Elena Ruiz al saxofón, quien aportará un nuevo sonido a nuestras versiones.',
-    category: 'Orquesta'
-  },
-  {
-    id: 4,
-    title: 'Disponibles para bodas en 2026',
-    date: '5 NOV 2025',
-    excerpt: 'Ya estamos tomando reservas para eventos privados y bodas para la temporada 2026. ¡Contacta con nosotros!',
-    category: 'Anuncios'
-  }
-];
-
 const Noticias = () => {
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const loadNews = async () => {
+      try {
+        const posts = await fetchFacebookPosts();
+        if (posts.length > 0) {
+          setNews(posts);
+        } else {
+          setError(true); // Consider empty result as "error" or just no news
+        }
+      } catch (err) {
+        console.error(err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadNews();
+  }, []);
+
   return (
     <section id="noticias" className="noticias">
       <div className="container">
@@ -57,27 +44,48 @@ const Noticias = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Mantente al día con todas nuestras novedades
+          Mantente al día con todas nuestras novedades en Facebook
         </motion.h3>
-        
-        <div className="news-grid">
-          {news.map((item, index) => (
-            <motion.article
-              key={item.id}
-              className="news-card"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <span className="news-category">{item.category}</span>
-              <span className="news-date">{item.date}</span>
-              <h3>{item.title}</h3>
-              <p>{item.excerpt}</p>
-              <a href="#" className="read-more">Leer más →</a>
-            </motion.article>
-          ))}
-        </div>
+
+        {loading ? (
+          <div className="loading-container" style={{ textAlign: 'center', padding: '2rem' }}>
+            <p>Cargando noticias...</p>
+          </div>
+        ) : error ? (
+          <div className="error-container" style={{ textAlign: 'center', padding: '2rem' }}>
+            <p>No se pudieron cargar las noticias recientes.</p>
+            <a href="https://www.facebook.com/orquesta.elegidos/?locale=es_ES" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Ver en Facebook
+            </a>
+          </div>
+        ) : (
+          <div className="news-grid">
+            {news.map((item, index) => (
+              <motion.article
+                key={item.id}
+                className="news-card"
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+              >
+                {item.image && (
+                  <div className="news-image">
+                    <img src={item.image} alt="Imagen de la noticia" />
+                  </div>
+                )}
+                <div className="news-content">
+                  <div className="news-header">
+                    <span className="news-date">{item.date}</span>
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more">Leer más →</a>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
