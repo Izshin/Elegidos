@@ -50,38 +50,7 @@ const Contacto = () => {
         </motion.h3>
 
         <div className="contacto-content">
-          <motion.div
-            className="contacto-info"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h3>Información de Contacto</h3>
-            <div className="info-item">
-              <div>
-                <h4>Email</h4>
-                <p>info@orquestaelegidos.com</p>
-              </div>
-            </div>
-            <div className="info-item">
-              <div>
-                <h4>Teléfono</h4>
-                <p>+34 600 123 456</p>
-              </div>
-            </div>
-            <div className="info-item">
-              <div>
-                <h4>Ubicación</h4>
-                <p>Andalucía, España</p>
-              </div>
-            </div>
-            <div className="info-item">
-              <div>
-                <h4>Eventos</h4>
-                <p>Ferias, Bodas, Cumpleaños, Eventos Corporativos</p>
-              </div>
-            </div>
-          </motion.div>
+          
 
           <motion.form
             className="contacto-form"
@@ -165,6 +134,38 @@ const Contacto = () => {
               Enviar Mensaje
             </motion.button>
           </motion.form>
+          <motion.div
+            className="contacto-info"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h3>Información de Contacto</h3>
+            <div className="info-item">
+              <div>
+                <h4>Email</h4>
+                <p>info@orquestaelegidos.com</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <div>
+                <h4>Teléfono</h4>
+                <p>+34 600 123 456</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <div>
+                <h4>Ubicación</h4>
+                <p>Andalucía, España</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <div>
+                <h4>Eventos</h4>
+                <p>Ferias, Bodas, Cumpleaños, Eventos Corporativos</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
