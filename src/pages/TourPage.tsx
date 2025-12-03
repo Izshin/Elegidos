@@ -24,7 +24,7 @@ const TourPage = () => {
         style={{ display: 'block', maxWidth: '100%', padding: '2rem' }}
       >
         <motion.img
-          src="public/images/Tour placeholder.jpg"
+          src="/images/Tour%20placeholder.jpg"
           alt="Tour Dates Placeholder"
           whileHover={{
             boxShadow: '0 0 30px var(--color-accent)',
