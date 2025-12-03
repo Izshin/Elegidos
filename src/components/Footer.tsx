@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-cta section-cta">
-            <a href="#contacto" className="btn-contratanos">Contrátanos</a>
+            <a href="contacto" className="btn-contratanos">Contrátanos</a>
           </div>
 
           <div className="footer-section section-contact">
