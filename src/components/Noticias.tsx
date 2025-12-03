@@ -53,7 +53,7 @@ const Noticias = () => {
           </div>
         ) : error ? (
           <div className="error-container" style={{ textAlign: 'center', padding: '2rem' }}>
-            <p>No se pudieron cargar las noticias recientes.</p>
+            <p style={{ marginBottom: '2rem' }}>No se pudieron cargar las noticias recientes.</p>
             <a href="https://www.facebook.com/orquesta.elegidos/?locale=es_ES" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Ver en Facebook
             </a>
