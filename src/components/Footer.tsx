@@ -1,6 +1,8 @@
 import './Footer.css';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate(); // Faltaba esto
   const currentYear = new Date().getFullYear();
 
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
 
-
+          {/* Sección Social */}
           <div className="footer-section section-social">
             <h4>Síguenos</h4>
             <div className="social-links">
@@ -21,16 +23,25 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Sección CTA */}
           <div className="footer-cta section-cta">
-            <a href="#contacto" className="btn-contratanos">Contrátanos</a>
+            <button 
+              type="button" 
+              className="btn-contratanos" 
+              onClick={() => navigate('/contacto')}
+            >
+              Contrátanos
+            </button>
           </div>
 
+          {/* Sección Contacto */}
           <div className="footer-section section-contact">
             <h4>Contacto</h4>
             <p>Email: info@orquestaelegidos.com</p>
             <p>Tel: +34 600 123 456</p>
             <p>Andalucía, España</p>
           </div>
+
         </div>
 
         <div className="footer-bottom">
