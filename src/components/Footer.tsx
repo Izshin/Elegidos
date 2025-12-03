@@ -1,4 +1,5 @@
 import './Footer.css';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,8 +23,14 @@ const Footer = () => {
           </div>
 
           <div className="footer-cta section-cta">
-            <a href="contacto" className="btn-contratanos">Contrátanos</a>
-          </div>
+            <button 
+  type="button" 
+  className="btn-contratanos" 
+  onClick={() => navigate('/contacto')}
+>
+  Contrátanos
+</button>
+
 
           <div className="footer-section section-contact">
             <h4>Contacto</h4>
