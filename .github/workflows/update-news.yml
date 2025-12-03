@@ -3,6 +3,9 @@ name: Update News Feed
 on:
   schedule:
     - cron: '0 */23 * * *' # Run every 23 hours
+  push:
+    branches:
+      - main
   workflow_dispatch: # Allow manual trigger
 
 jobs:
