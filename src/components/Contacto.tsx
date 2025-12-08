@@ -38,7 +38,7 @@ const Contacto = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          Contáctanos
+          Contrátanos
         </motion.h2>
         <motion.h3
           className="section-intro"

@@ -89,7 +89,7 @@ const Header = () => {
                   className={isActive('/contacto') ? 'active' : ''}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contáctanos
+                  Contrátanos
                 </Link>
               </li>
               <li>
