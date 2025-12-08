@@ -71,7 +71,10 @@ const Noticias = () => {
               >
                 {item.image && (
                   <div className="news-image">
-                    <img src={item.image} alt="Imagen de la noticia" />
+                    <img
+                      src={item.image.startsWith('http') ? item.image : `${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
+                      alt="Imagen de la noticia"
+                    />
                   </div>
                 )}
                 <div className="news-content">
