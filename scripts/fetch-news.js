@@ -77,7 +77,7 @@ async function fetchNews() {
                 const imagePath = path.join(imagesDir, imageName);
                 const success = await downloadImage(imageUrl, imagePath);
                 if (success) {
-                    localImagePath = `/Elegidos/news-images/${imageName}`;
+                    localImagePath = `/news-images/${imageName}`;
                 } else {
                     // Fallback to original URL if download fails (though it might be broken)
                     localImagePath = imageUrl;

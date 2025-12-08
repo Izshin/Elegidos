@@ -72,8 +72,19 @@ const Noticias = () => {
                 {item.image && (
                   <div className="news-image">
                     <img
-                      src={item.image.startsWith('http') ? item.image : `${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
+                      src={
+                        item.image.startsWith('http')
+                          ? item.image
+                          : item.image.startsWith(import.meta.env.BASE_URL)
+                            ? item.image
+                            : `${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`
+                      }
                       alt="Imagen de la noticia"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null; // Prevent infinite loop
+                        target.src = `${import.meta.env.BASE_URL}images/ElegidosLogo.png`;
+                      }}
                     />
                   </div>
                 )}
