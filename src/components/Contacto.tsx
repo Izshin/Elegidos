@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import './Contacto.css';
 
 const Contacto = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,6 +12,7 @@ const Contacto = () => {
     eventType: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -18,16 +21,34 @@ const Contacto = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('¡Gracias por contactarnos! Te responderemos pronto.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      eventType: '',
-      message: ''
-    });
+    if (!form.current) return;
+
+    setStatus('sending');
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        eventType: '',
+        message: ''
+      });
+      setTimeout(() => setStatus('idle'), 5000); // Reset status after 5 seconds
+    } catch (error) {
+      console.error('FAILED...', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -50,9 +71,8 @@ const Contacto = () => {
         </motion.h3>
 
         <div className="contacto-content">
-          
-
           <motion.form
+            ref={form}
             className="contacto-form"
             onSubmit={handleSubmit}
             initial={{ x: 50, opacity: 0 }}
@@ -128,12 +148,21 @@ const Contacto = () => {
             <motion.button
               type="submit"
               className="btn btn-primary"
+              disabled={status === 'sending'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Enviar Mensaje
+              {status === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
             </motion.button>
+
+            {status === 'success' && (
+              <p className="status-message success">¡Mensaje enviado con éxito! Te contactaremos pronto.</p>
+            )}
+            {status === 'error' && (
+              <p className="status-message error">Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.</p>
+            )}
           </motion.form>
+
           <motion.div
             className="contacto-info"
             initial={{ x: -50, opacity: 0 }}

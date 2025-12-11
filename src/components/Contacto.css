@@ -142,3 +142,23 @@
     word-break: break-word;
   }
 }
+
+.status-message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+  border: 1px solid rgba(72, 187, 120, 0.3);
+}
+
+.status-message.error {
+  background-color: rgba(245, 101, 101, 0.2);
+  color: #f56565;
+  border: 1px solid rgba(245, 101, 101, 0.3);
+}
