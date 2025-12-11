@@ -80,7 +80,7 @@ const Home = () => {
             }}
             initial={{ y: index === 0 ? 0 : '100%' }}
             animate={{ y: index <= currentImageIndex ? 0 : '100%' }}
-            transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
           />
         ))}
       </div>
