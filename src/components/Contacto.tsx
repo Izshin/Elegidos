@@ -9,6 +9,7 @@ const Contacto = () => {
     name: '',
     email: '',
     phone: '',
+    date: '',
     eventType: '',
     message: ''
   });
@@ -32,6 +33,7 @@ const Contacto = () => {
 Nombre: ${formData.name}
 Email: ${formData.email}
 Teléfono: ${formData.phone}
+Fecha: ${formData.date}
 Tipo de Evento: ${formData.eventType}
 Mensaje: ${formData.message}`;
 
