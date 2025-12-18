@@ -23,6 +23,24 @@ const Contacto = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      const message = `¡Hola! Me gustaría recibir información para contratar a la orquesta. Os dejo los detalles de mi evento:
+
+Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone}
+Tipo de Evento: ${formData.eventType}
+Mensaje: ${formData.message}`;
+
+      const whatsappUrl = `https://wa.me/34659996468?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      return;
+    }
+
+    // PC Logic - Send Email
     if (!form.current) return;
 
     setStatus('sending');
