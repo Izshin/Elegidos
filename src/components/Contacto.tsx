@@ -28,14 +28,16 @@ const Contacto = () => {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (isMobile) {
-      const message = `¡Hola! Me gustaría recibir información para contratar a la orquesta. Os dejo los detalles de mi evento:
+      const message = `¡Hola! Me encanta vuestra orquesta y me gustaría que formarais parte de mi evento 🎵
 
-Nombre: ${formData.name}
-Email: ${formData.email}
-Teléfono: ${formData.phone}
-Fecha: ${formData.date}
-Tipo de Evento: ${formData.eventType}
-Mensaje: ${formData.message}`;
+Sería para *${formData.eventType}* el día *${formData.date}*.
+
+Os dejo mis datos y un poco más de información:
+👤 ${formData.name}
+📧 ${formData.email}
+📱 ${formData.phone}
+
+💬 ${formData.message}`;
 
 
       const whatsappUrl = `https://wa.me/34659996468?text=${encodeURIComponent(message)}`;
