@@ -35,6 +35,7 @@ Teléfono: ${formData.phone}
 Tipo de Evento: ${formData.eventType}
 Mensaje: ${formData.message}`;
 
+
       const whatsappUrl = `https://wa.me/34659996468?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
       return;
