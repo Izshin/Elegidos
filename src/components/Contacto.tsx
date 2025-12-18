@@ -48,11 +48,28 @@ Mensaje: ${formData.message}`;
 
     setStatus('sending');
 
+    const eventTypeMap: Record<string, string> = {
+      feria: 'una Feria',
+      boda: 'una Boda',
+      cumpleaños: 'un Cumpleaños',
+      corporativo: 'un Evento Corporativo',
+      otro: 'otro tipo de evento'
+    };
+
+    const naturalEventType = eventTypeMap[formData.eventType] || formData.eventType;
+
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          date: formData.date,
+          eventType: naturalEventType,
+          message: formData.message
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
@@ -61,6 +78,7 @@ Mensaje: ${formData.message}`;
         name: '',
         email: '',
         phone: '',
+        date: '',
         eventType: '',
         message: ''
       });
@@ -133,6 +151,17 @@ Mensaje: ${formData.message}`;
                 value={formData.phone}
                 onChange={handleChange}
                 required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="date">Fecha del Evento</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
               />
             </div>
 
