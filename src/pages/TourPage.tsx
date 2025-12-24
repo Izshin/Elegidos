@@ -18,13 +18,13 @@ const TourPage = () => {
       }}
     >
       <a
-        href="https://www.facebook.com/photo.php?fbid=5343305385745840&id=844227455653678&set=a.844227505653673&locale=ms_MY"
+        href="https://www.facebook.com/orquesta.elegidos/posts/pfbid04tYxiHfUGwARiqpq9CKjJSaoj5xkDCkSGTcxCCRn82KWa9DDHFDqGuANszwL5CfTl"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ display: 'block', maxWidth: '100%', padding: '2rem' }}
+        style={{ display: 'block', maxWidth: '100%', padding: '2.4rem' }}
       >
         <motion.img
-          src={`${import.meta.env.BASE_URL}images/Tour%20placeholder.jpg`}
+          src={`${import.meta.env.BASE_URL}images/Tour%202025.jpg`}
           alt="Tour Dates Placeholder"
           whileHover={{
             boxShadow: '0 0 30px var(--color-accent)',
