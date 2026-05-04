@@ -1,11 +1,56 @@
 [
   {
     "id": 1,
-    "title": "Publicación de Facebook",
-    "date": "INVALID DATE",
-    "excerpt": "Ver publicación en Facebook...",
+    "title": "Muchas gracias a los amigos de Paradas y Feria por...",
+    "date": "4 MAY 2026",
+    "excerpt": "Muchas gracias a los amigos de Paradas y Feria por el fin de semana que hemos tenido.\nLo hemos pasad...",
     "category": "Facebook",
-    "link": "https://www.facebook.com/orquesta.elegidos/?locale=es_ES",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0TpuxvfkczFBba3apTgTNQyupg6TdBXBhSmCr3E72HMLgrp7C7uv1iqA8FBe9X4BSl",
     "image": null
+  },
+  {
+    "id": 2,
+    "title": "Hoy nos vamos a…",
+    "date": "3 MAY 2026",
+    "excerpt": "Hoy nos vamos a…",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0eY6ntD3biXRAYcVHssNn7Ah1NK7p3RqfKwadWcBVSsjV9o4UeeKSwzp9vULRAGvLl",
+    "image": "/news-images/post-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Esta noche de Sábado a por todas!!!🎼🎼🎼",
+    "date": "2 MAY 2026",
+    "excerpt": "Esta noche de Sábado a por todas!!!🎼🎼🎼",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02CMkYHJ4oACvyHP6YFTXsxh19TUYB7gdtYGrNAToGmFp47Y72mnoX8Jrm1aCnA7Csl",
+    "image": "/news-images/post-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Esta noche nos vemos en:",
+    "date": "1 MAY 2026",
+    "excerpt": "Esta noche nos vemos en:",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid06F9VnTLkBH2opQVx6V9dKgj3GcxC1p4vSZVYGtXxqRRpo15eUAQyGEz7xxEJN4K6l",
+    "image": "/news-images/post-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Tenéis planes para Mayo??? Aquí os dejamos algunas...",
+    "date": "29 ABR 2026",
+    "excerpt": "Tenéis planes para Mayo??? Aquí os dejamos algunas sugerencias…🎼🎼🎼",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02GDCJwBtnSmeAgDpTNPKFEy8crwgcQfMSVVqH1XduZqd6pU42Krkkr6DX1A8PADyvl",
+    "image": "/news-images/post-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Gracias Alcalá de los Gazules por la acogida en Sa...",
+    "date": "26 ABR 2026",
+    "excerpt": "Gracias Alcalá de los Gazules por la acogida en San Jorge 2026.\nLo hemos pasado en grande. A seguir ...",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0q2WZvWK9W9HPQ93odWy9agqJNQKrDXFR61yxmvpycMb8hNE4KQLwhh7d43QwVAjdl",
+    "image": "/news-images/post-6.jpg"
   }
 ]
