@@ -17,65 +17,65 @@ export const members: Member[] = [
         image: import.meta.env.BASE_URL + 'images/Carlos.jpg',
         title: 'Carlos Espinosa',
         subtitle: 'Vocalista Principal',
-        handle: 'Utrera, 1974',
-        location: 'Coro Amistad de Utrera',
+        handle: '',
+        location: 'Utrera, 1974',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(145deg, #FF6200, #000000)',
-        bio: 'La voz que lidera nuestra orquesta con pasión y experiencia. Carlos lleva la música en la sangre y conecta con el público en cada nota.'
+        bio: 'La voz de la orquesta y el culpable de que te vayas ronco a casa. Lleva más de 20 años encima de un escenario y todavía no ha encontrao una canción que no se sepa.'
     },
     {
         id: 'antonio-mofly',
         image: import.meta.env.BASE_URL + 'images/Antonio.jpg',
         title: 'Antonio Mofly',
         subtitle: 'Batería',
-        handle: 'Utrera, 1972',
-        location: 'Jazz & Flamenco',
+        handle: '',
+        location: 'Utrera, 1972',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(165deg, #823F00, #000000)',
-        bio: 'El corazón rítmico de Elegidos. Con una trayectoria impresionante en Jazz y Flamenco, Antonio aporta una base sólida y dinámica a nuestro sonido.'
+        bio: 'El corazón que le late a la orquesta. Con él detrás de la batería la fiesta no para ni cuando le piden que pare. Jazz, flamenco, rock... lo que haga falta, ahí está él.'
     },
     {
         id: 'jesuli-gonzalez',
         image: import.meta.env.BASE_URL + 'images/Jesuli.png',
         title: 'Jesuli González',
-        subtitle: 'Guitarrista',
-        handle: 'Utrera',
-        location: 'Gran suli',
+        subtitle: 'Guitarra Eléctrica',
+        handle: '',
+        location: 'Utrera',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(195deg, #FF6200, #000000)',
-        bio: 'Maestro de las seis cuerdas. Jesuli domina desde los riffs más rockeros hasta las melodías más sutiles, dando color a cada canción.'
+        bio: 'Le dices qué canción quieres y él ya la está tocando. Lo mismo te mete un solo de rock que te saca una bulería, y sin despeinarse. Maestro de las seis cuerdas y de quedarse tan ancho.'
     },
     {
         id: 'kiko',
         image: import.meta.env.BASE_URL + 'images/Kiko.png',
         title: 'Kiko',
-        subtitle: 'Teclista',
-        handle: 'Utrera',
-        location: 'Tecladista Principal',
+        subtitle: 'Teclados',
+        handle: 'Cádiz',
+        location: 'Cádiz',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(210deg, #823F00, #000000)',
-        bio: 'El arquitecto de nuestros arreglos. Kiko crea atmósferas únicas y sonidos modernos que definen el estilo de Orquesta Elegidos.'
+        bio: 'Viene de Cádiz, que ya lo explica to. Con los teclados hace lo que le sale de dentro, y lo que le sale de dentro es de lo mejorcito que hemos escuchao en mucho tiempo.'
     },
     {
         id: 'miguel-navas',
         image: import.meta.env.BASE_URL + 'images/Navas.jpg',
         title: 'Miguel Navas',
         subtitle: 'Vocalista',
-        handle: 'El Rubio de Utrera, 1975',
-        location: 'Pop & Flamenco',
+        handle: '',
+        location: 'El Rubio de Utrera, 1975',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(225deg, #FF6200, #000000)',
-        bio: 'Versatilidad y carisma en el escenario. Miguel es capaz de interpretar cualquier género con una energía contagiosa.'
+        bio: 'El rubio de la orquesta y el que tiene a la gente cantando desde el primer tema. Lo mismo te canta a Bisbal que te mete reggaeton como si hubiera nacío en San Juan. Energía contagiosa, eso no le falta.'
     },
     {
         id: 'sergio-take',
         image: import.meta.env.BASE_URL + 'images/Take.jpg',
         title: 'Sergio "Take"',
-        subtitle: 'Bajista',
-        handle: 'Utrera',
-        location: 'Base Rítmica',
+        subtitle: 'Bajo Eléctrico',
+        handle: '',
+        location: 'Utrera',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(135deg, #823F00, #000000)',
-        bio: 'El groove de la banda. Sergio mantiene el pulso firme y aporta profundidad a nuestra música con su bajo.'
+        bio: 'El bajo que no ves pero que te mueve las entrañas. Sin Take, la orquesta sonaría como cuando le falta sal a la comida: que algo falla, aunque no sepas exactamente qué.'
     }
 ];

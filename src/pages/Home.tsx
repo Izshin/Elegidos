@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const images = [
-    import.meta.env.BASE_URL + 'images/Orquesta-landing.jpg',
+    import.meta.env.BASE_URL + 'images/Orquesta-landing.png',
     import.meta.env.BASE_URL + 'images/Orquesta-landing2.jpg',
     import.meta.env.BASE_URL + 'images/Orquesta-landing3.jpg',
     import.meta.env.BASE_URL + 'images/Orquesta-landing4.jpg',
@@ -155,12 +155,11 @@ const Home = () => {
             >
               <h3>Ferias de Andalucía</h3>
               <p>
-                Desde las calles de Utrera hasta la Feria de Abril de Sevilla,
-                Orquesta Elegidos ha sido protagonista en las casetas más emblemáticas
-                de Andalucía. Nuestra versatilidad nos ha llevado a amenizar la Feria
-                de Dos Hermanas, la Velá de Santiago en Jerez y las fiestas patronales
-                de Lebrija. Con más de una década de experiencia, conocemos el ritmo
-                exacto que necesita cada momento festivo.
+                Desde Utrera hasta donde haga falta. Llevamos más de una década
+                en las casetas más animás de Andalucía: la Feria de Abril, Dos Hermanas,
+                la Velá de Lebrija, Jerez... Si hay feria y hay gente con ganas de bailar,
+                ahí estamos nosotros. Sabemos exactamente qué canción ponerle a cada
+                momento de la noche, y eso no se improvisa.
               </p>
             </motion.div>
 
@@ -173,12 +172,11 @@ const Home = () => {
             >
               <h3>Eventos Privados</h3>
               <p>
-                Bodas inolvidables, celebraciones corporativas y fiestas privadas
-                son nuestro sello distintivo. Hemos tocado en cortijos señoriales
-                de la campiña sevillana, hoteles de cinco estrellas en Marbella y
-                haciendas con encanto en toda Andalucía. Adaptamos nuestro repertorio
-                a cada cliente, fusionando rock, pop y reggaeton para crear la
-                atmósfera perfecta en tu evento especial.
+                Bodas, comuniones, fiestas de empresa, cumpleaños de los que se recuerdan...
+                lo que se tercie. Hemos tocado en cortijos, haciendas, chiringuitos en la playa
+                y terrazas con vistas. Nos adaptamos a lo que el cliente quiera, desde
+                un tema de entrada que ponga los pelos de punta hasta el último tema
+                de la madrugada cuando ya nadie quiere irse.
               </p>
             </motion.div>
 
@@ -191,12 +189,11 @@ const Home = () => {
             >
               <h3>Nuestro Sonido</h3>
               <p>
-                Rock, pop, reggaeton y los mejores éxitos de autores españoles e
-                internacionales. Desde los clásicos de Los Chichos y Los Chunguitos
-                hasta los hits más actuales de Bad Bunny y Rosalía, nuestro repertorio
-                es una explosión de energía que mantiene la pista llena durante toda
-                la noche. Versiones únicas con arreglos propios que dan un toque
-                especial a cada canción.
+                Rock, pop, reggaeton, flamenco fusión y lo que el público pida.
+                Desde Los Chichos hasta Bad Bunny, desde Bisbal hasta Rosalía.
+                Nuestras versiones no son copia y pega: tienen arreglos y un arte propios 
+                que le dan un toque diferente a cada canción. La pista llena
+                desde el primer tema hasta que el local cierra. Eso no falla.
               </p>
             </motion.div>
 
@@ -209,12 +206,10 @@ const Home = () => {
             >
               <h3>Experiencia Profesional</h3>
               <p>
-                Con equipamiento de última generación y un equipo técnico experimentado,
-                garantizamos un sonido impecable en cualquier espacio. Hemos actuado
-                ante más de 10,000 personas en plazas de toros, así como en eventos
-                íntimos de 50 invitados. Nuestra pasión por la música y el
-                entretenimiento se refleja en cada actuación, creando momentos
-                memorables que perduran en el tiempo.
+                Equipamiento de primera y un equipo técnico que sabe lo que hace.
+                Da igual si el bolo es en una caseta municipal llena
+                o en una terraza íntima para 50 invitaos. El sonido siempre sale bien.
+                Porque lo que hacemos es profesional, y se nota.
               </p>
             </motion.div>
           </motion.div>
@@ -233,7 +228,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, root: containerRef }}
             >
-              Disfruta del arte y la buena música en directo 
+              Que la fiesta la recuerden mañana
             </motion.h3>
             <motion.button
               className="btn btn-cta-large"

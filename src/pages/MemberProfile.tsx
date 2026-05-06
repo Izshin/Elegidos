@@ -65,19 +65,23 @@ const MemberProfile = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                 >
                     <h1 className="member-name">{member.title}</h1>
-                    <h2 className="member-role">{member.subtitle}</h2>
+                    {member.subtitle && <h2 className="member-role">{member.subtitle}</h2>}
 
                     {member.bio && <p className="member-bio">{member.bio}</p>}
 
                     <div className="member-details">
-                        <div className="detail-item">
-                            <h4>Origen</h4>
-                            <p>{member.handle}</p>
-                        </div>
-                        <div className="detail-item">
-                            <h4>Rol</h4>
-                            <p>{member.location}</p>
-                        </div>
+                        {member.handle && (
+                            <div className="detail-item">
+                                <h4>Origen</h4>
+                                <p>{member.handle}</p>
+                            </div>
+                        )}
+                        {member.location && (
+                            <div className="detail-item">
+                                <h4>Rol</h4>
+                                <p>{member.location}</p>
+                            </div>
+                        )}
                     </div>
 
                     <motion.button

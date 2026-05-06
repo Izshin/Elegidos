@@ -65,7 +65,7 @@ const Header = () => {
                   La Orquesta
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/tour"
                   className={isActive('/tour') ? 'active' : ''}
@@ -73,7 +73,7 @@ const Header = () => {
                 >
                   Tour
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/noticias"

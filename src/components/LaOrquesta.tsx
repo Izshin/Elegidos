@@ -14,7 +14,7 @@ const LaOrquesta = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          Conoce a los talentosos músicos que dan vida a Orquesta Elegidos
+          Los que hacen posible que la noche no tenga fin
         </motion.h3>
 
         <ChromaGrid
