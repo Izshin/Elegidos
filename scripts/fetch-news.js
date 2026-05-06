@@ -49,12 +49,32 @@ async function fetchNews() {
         }
 
         const processedData = await Promise.all(data.map(async (post, index) => {
-            const date = new Date(post.timestamp * 1000);
-            const formattedDate = date.toLocaleDateString('es-ES', {
-                day: 'numeric',
-                month: 'short',
-                year: 'numeric',
-            }).toUpperCase();
+            // Handle different possible date fields and formats
+            let date;
+            if (post.timestamp) {
+                date = new Date(post.timestamp * 1000);
+            } else if (post.time) {
+                date = new Date(post.time);
+            } else if (post.date) {
+                date = new Date(post.date);
+            } else if (post.createdTime) {
+                date = new Date(post.createdTime);
+            } else {
+                date = new Date(); // Fallback to current date
+            }
+
+            // Validate the date
+            const formattedDate = isNaN(date.getTime())
+                ? new Date().toLocaleDateString('es-ES', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                }).toUpperCase()
+                : date.toLocaleDateString('es-ES', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                }).toUpperCase();
 
             const title = post.text ? post.text.split('\n')[0].substring(0, 50) + (post.text.length > 50 ? '...' : '') : 'Publicación de Facebook';
 
