@@ -49,7 +49,7 @@ Os dejo mis datos y un poco más de información:
 💬 ${formData.message}`;
 
 
-      const whatsappUrl = `https://wa.me/34659996468?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/34636571207?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
       return;
     }
@@ -234,13 +234,14 @@ Os dejo mis datos y un poco más de información:
             <div className="info-item">
               <div>
                 <h4>Email</h4>
-                <p>info@orquestaelegidos.com</p>
+                <p>elegidos.gerencia@gmail.com</p>
               </div>
             </div>
             <div className="info-item">
               <div>
-                <h4>Teléfono</h4>
-                <p>+34 600 123 456</p>
+                <h4>Teléfono / WhatsApp</h4>
+                <p>Miguel Ángel Navas</p>
+                <p>+34 636 571 207</p>
               </div>
             </div>
             <div className="info-item">
