@@ -57,7 +57,6 @@ async function fetchNews() {
             }).toUpperCase();
 
             const title = post.text ? post.text.split('\n')[0].substring(0, 50) + (post.text.length > 50 ? '...' : '') : 'Publicación de Facebook';
-            const excerpt = post.text ? post.text.substring(0, 100) + (post.text.length > 100 ? '...' : '') : 'Ver publicación en Facebook...';
 
             let imageUrl = post.imageUrl || post.thumbnailUrl || post.mediaUrl || post.thumb;
 
@@ -83,6 +82,10 @@ async function fetchNews() {
                     localImagePath = imageUrl;
                 }
             }
+
+            const excerpt = post.text
+                ? (localImagePath ? post.text.substring(0, 100) + (post.text.length > 100 ? '...' : '') : post.text)
+                : 'Ver publicación en Facebook...';
 
             return {
                 id: index + 1,
