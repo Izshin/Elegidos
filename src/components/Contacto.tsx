@@ -28,9 +28,18 @@ const Contacto = () => {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (isMobile) {
+      const whatsappEventTypeMap: Record<string, string> = {
+        feria: 'una Feria',
+        boda: 'una Boda',
+        cumpleaños: 'un Cumpleaños',
+        corporativo: 'un Evento Corporativo',
+        otro: 'otro tipo de evento'
+      };
+      const naturalWhatsappEventType = whatsappEventTypeMap[formData.eventType] || formData.eventType;
+
       const message = `¡Hola! Me encanta vuestra orquesta y me gustaría que formarais parte de mi evento 🎵
 
-Sería para *${formData.eventType}* el día *${formData.date}*.
+Sería para *${naturalWhatsappEventType}* el día *${formData.date}*.
 
 Os dejo mis datos y un poco más de información:
 👤 ${formData.name}
