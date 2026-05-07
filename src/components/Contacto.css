@@ -287,9 +287,9 @@
 
 .rgpd-tooltip-close {
   margin-top: 0.85rem;
-  background: transparent;
+  background: var(--color-accent);
   border: 2px solid var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-black);
   border-radius: 4px;
   padding: 0.35rem 1rem;
   font-size: 0.85rem;
@@ -302,8 +302,10 @@
 }
 
 .rgpd-tooltip-close:hover {
-  background: var(--color-accent);
+  background: #FFDABA;
+  border-color: #FFDABA;
   color: var(--color-black);
+  box-shadow: 0 10px 40px rgba(255, 218, 186, 0.6);
 }
 
 .form-group input.input-error,
