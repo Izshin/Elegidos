@@ -50,6 +50,7 @@ export const members: Member[] = [
         image: import.meta.env.BASE_URL + 'images/Kiko.png',
         title: 'Kiko',
         subtitle: 'Teclista',
+        handle: '',
         location: 'Cádiz',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(210deg, #823F00, #000000)',
