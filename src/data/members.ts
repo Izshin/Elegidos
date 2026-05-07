@@ -32,7 +32,7 @@ export const members: Member[] = [
         location: 'Utrera, 1972',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(165deg, #823F00, #000000)',
-        bio: 'El corazón que le late a la orquesta. Con él detrás de la batería la fiesta no para ni cuando le piden que pare. Jazz, flamenco, rock... lo que haga falta, ahí está él.'
+        bio: 'El corazón que le late a la orquesta. Con él detrás de la batería la fiesta no para ni cuando le piden que pare. Latin, flamenco, rock... lo que haga falta, ahí está él.'
     },
     {
         id: 'jesuli-gonzalez',
