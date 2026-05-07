@@ -1,4 +1,3 @@
-
 export interface Member {
     id: string;
     image: string;
@@ -62,10 +61,10 @@ export const members: Member[] = [
         title: 'Miguel Navas',
         subtitle: 'Vocalista',
         handle: '',
-        location: 'El Rubio de Utrera, 1975',
+        location: 'Utrera, 1975',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(225deg, #FF6200, #000000)',
-        bio: 'El rubio de la orquesta y el que tiene a la gente cantando desde el primer tema. Lo mismo te canta a Bisbal que te mete reggaeton como si hubiera nacío en Puerto Rico. Energía contagiosa, eso no le falta.'
+        bio: 'La imagen de la orquesta y el que tiene a la gente cantando desde el primer tema. Lo mismo te canta a Bisbal que te mete reggaeton como si hubiera nacío en Puerto Rico. Energía contagiosa, eso no le falta.'
     },
     {
         id: 'sergio-take',
