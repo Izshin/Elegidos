@@ -108,8 +108,7 @@ const Home = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Versiones que hacen historia
-            </motion.h2>
+Vive el arte en directo            </motion.h2>
 
             <motion.button
               className="btn btn-primary"
@@ -138,6 +137,8 @@ const Home = () => {
             >
               Contrátanos
             </motion.button>
+
+            
           </motion.div>
 
           <motion.div
@@ -187,7 +188,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true, root: containerRef }}
             >
-              <h3>Nuestro Sonido</h3>
+              <h3>Nuestro Repertorio</h3>
               <p>
                 Rock, pop, reggaeton, flamenco fusión y lo que el público pida.
                 Desde Los Chichos hasta Bad Bunny, desde Bisbal hasta Rosalía.
@@ -204,12 +205,13 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true, root: containerRef }}
             >
-              <h3>Experiencia Profesional</h3>
+              <h3>Más de 30 años en el escenario</h3>
               <p>
-                Equipamiento de primera y un equipo técnico que sabe lo que hace.
-                Da igual si el bolo es en una caseta municipal llena
-                o en una terraza íntima para 50 invitaos. El sonido siempre sale bien.
-                Porque lo que hacemos es profesional, y se nota.
+                Desde 1994 llevamos subiendo al escenario, y eso se nota en cada bolo.
+                Más de tres décadas tocando en ferias, bodas, fiestas y eventos de toda
+                Andalucía nos han enseñado algo muy claro: cada público es distinto
+                y hay que saber leerlo. Equipamiento de primera, equipo técnico que sabe
+                lo que hace, y una experiencia que no se compra en ningún lado.
               </p>
             </motion.div>
           </motion.div>

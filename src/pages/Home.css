@@ -131,6 +131,16 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+.home-since {
+  color: var(--color-accent);
+  font-size: calc(var(--font-size-base) * 0.95);
+  letter-spacing: 0.1em;
+  margin-top: -1rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+}
+
 .home-content-sections {
   padding: 4rem 2rem;
   display: flex;

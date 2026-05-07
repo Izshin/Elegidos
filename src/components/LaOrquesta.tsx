@@ -14,7 +14,7 @@ const LaOrquesta = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          Los que hacen posible que la noche no tenga fin
+          Los que llevan el show
         </motion.h3>
 
         <ChromaGrid

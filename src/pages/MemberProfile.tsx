@@ -70,15 +70,10 @@ const MemberProfile = () => {
                     {member.bio && <p className="member-bio">{member.bio}</p>}
 
                     <div className="member-details">
-                        {member.handle && (
-                            <div className="detail-item">
-                                <h4>Origen</h4>
-                                <p>{member.handle}</p>
-                            </div>
-                        )}
+                        
                         {member.location && (
                             <div className="detail-item">
-                                <h4>Rol</h4>
+                                <h4>Origen</h4>
                                 <p>{member.location}</p>
                             </div>
                         )}
