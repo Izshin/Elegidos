@@ -36,7 +36,7 @@ const Header = () => {
           </Link>
 
           <button
-            className="menu-toggle"
+            className={`menu-toggle ${isMenuOpen ? 'menu-open' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >

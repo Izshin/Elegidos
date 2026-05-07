@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import './Contacto.css';
@@ -20,6 +20,11 @@ const Contacto = () => {
   const [validationMessage, setValidationMessage] = useState<string[]>([]);
   const [checkboxHovered, setCheckboxHovered] = useState(false);
   const [checkboxAlert, setCheckboxAlert] = useState(false);
+  const minDate = useMemo(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 1);
+    return d.toISOString().split('T')[0];
+  }, []);
 
   const validate = () => {
     const newErrors: Partial<Record<keyof typeof formData, string>> = {};
@@ -31,6 +36,12 @@ const Contacto = () => {
       newErrors.phone = 'El teléfono debe tener al menos 9 dígitos.';
     if (!formData.eventType)
       newErrors.eventType = 'Selecciona un tipo de evento.';
+    if (formData.date) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (new Date(formData.date) <= today)
+        newErrors.date = 'La fecha del evento debe ser futura.';
+    }
     return newErrors;
   };
 
@@ -214,8 +225,11 @@ Os dejo mis datos y un poco más de información:
                 name="date"
                 value={formData.date}
                 onChange={handleChange}
+                min={minDate}
+                className={errors.date ? 'input-error' : ''}
                 required
               />
+              {errors.date && <span className="field-error" style={{display:'block', marginTop:'0.35rem', fontSize:'0.78rem', color:'#fc8181'}}>{errors.date}</span>}
             </div>
 
             <div className="form-group">

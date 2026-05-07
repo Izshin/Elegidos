@@ -74,7 +74,7 @@
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
@@ -83,35 +83,68 @@
 
 .menu-toggle span {
   width: 25px;
-  height: 3px;
+  height: 2px;
   background-color: var(--color-white);
-  transition: all 0.3s ease;
+  display: block;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  transform-origin: center;
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    z-index: 1100;
+    position: relative;
   }
 
   .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: fixed;
+    top: 0;
     right: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--color-black);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    border-bottom: 2px solid var(--color-primary);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    border-left: none;
+    border-bottom: none;
   }
 
   .nav-open {
-    max-height: 400px;
+    transform: translateX(0);
   }
 
   .nav ul {
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .nav a {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  /* Hamburger → X */
+  .menu-toggle span {
+    transform-origin: center;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+  }
+
+  .menu-toggle.menu-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.menu-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .menu-toggle.menu-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
