@@ -9,6 +9,8 @@ const Contacto = () => {
     name: '',
     email: '',
     phone: '',
+    province: '',
+    address: '',
     date: '',
     eventType: '',
     message: ''
@@ -90,6 +92,7 @@ Os dejo mis datos y un poco más de información:
 👤 ${formData.name}
 📧 ${formData.email}
 📱 ${formData.phone}
+📍 ${formData.province}${formData.address ? ` — ${formData.address}` : ''}
 
 💬 ${formData.message}`;
 
@@ -122,6 +125,8 @@ Os dejo mis datos y un poco más de información:
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          province: formData.province,
+          address: formData.address,
           date: formData.date,
           eventType: naturalEventType,
           message: formData.message
@@ -134,6 +139,8 @@ Os dejo mis datos y un poco más de información:
         name: '',
         email: '',
         phone: '',
+        province: '',
+        address: '',
         date: '',
         eventType: '',
         message: ''
@@ -215,6 +222,28 @@ Os dejo mis datos y un poco más de información:
                 required
               />
 
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="province">Provincia</label>
+              <input
+                type="text"
+                id="province"
+                name="province"
+                value={formData.province}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="address">Dirección del Evento</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="form-group">
