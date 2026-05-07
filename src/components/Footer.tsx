@@ -37,8 +37,8 @@ const Footer = () => {
           {/* Sección Contacto */}
           <div className="footer-section section-contact">
             <h4>Contacto</h4>
-            <p>Email: info@orquestaelegidos.com</p>
-            <p>Tel: +34 600 123 456</p>
+            <p>Email: elegidos.gerencia@gmail.com</p>
+            <p>Tel: +34 636 571 207</p>
             <p>Andalucía, España</p>
           </div>
 
