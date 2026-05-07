@@ -158,7 +158,7 @@ Vive el arte en directo            </motion.h2>
               <p>
                 Desde Utrera hasta donde haga falta. Llevamos más de una década
                 en las casetas más animás de Andalucía: la Feria de Abril, Dos Hermanas,
-                la Velá de Lebrija, Jerez... Si hay feria y hay gente con ganas de bailar,
+                Utrera, Jerez... Si hay feria y hay gente con ganas de bailar,
                 ahí estamos nosotros. Sabemos exactamente qué canción ponerle a cada
                 momento de la noche, y eso no se improvisa.
               </p>
@@ -190,7 +190,7 @@ Vive el arte en directo            </motion.h2>
             >
               <h3>Nuestro Repertorio</h3>
               <p>
-                Rock, pop, reggaeton, flamenco fusión y lo que el público pida.
+                Rock, pop, reggaeton, flamenco y lo que el público pida.
                 Desde Los Chichos hasta Bad Bunny, desde Bisbal hasta Rosalía.
                 Nuestras versiones no son copia y pega: tienen arreglos y un arte propios 
                 que le dan un toque diferente a cada canción. La pista llena
