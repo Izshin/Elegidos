@@ -56,7 +56,7 @@
 
 @media (max-width: 768px) {
   .la-orquesta {
-    padding: 4rem 0;
+    padding: 12rem 0 4rem;
   }
 
   .la-orquesta .container {
