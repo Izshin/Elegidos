@@ -1,4 +1,3 @@
-
 export interface Member {
     id: string;
     image: string;
@@ -21,7 +20,7 @@ export const members: Member[] = [
         location: 'Utrera, 1974',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(145deg, #FF6200, #000000)',
-        bio: 'La voz de la orquesta y el culpable de que te vayas ronco a casa. Lleva más de 20 años encima de un escenario y todavía no ha encontrao una canción que no se sepa.'
+        bio: 'La voz de la orquesta y el culpable de que te vayas ronco a casa. Lleva más de 30 años encima de un escenario y todavía no ha encontrao una canción que no se sepa.'
     },
     {
         id: 'antonio-mofly',
@@ -32,7 +31,7 @@ export const members: Member[] = [
         location: 'Utrera, 1972',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(165deg, #823F00, #000000)',
-        bio: 'El corazón que le late a la orquesta. Con él detrás de la batería la fiesta no para ni cuando le piden que pare. Jazz, flamenco, rock... lo que haga falta, ahí está él.'
+        bio: 'El corazón que le late a la orquesta. Con él detrás de la batería la fiesta no para ni cuando le piden que pare. Latin, flamenco, fusión... lo que haga falta, ahí está él.'
     },
     {
         id: 'jesuli-gonzalez',
@@ -62,10 +61,10 @@ export const members: Member[] = [
         title: 'Miguel Navas',
         subtitle: 'Vocalista',
         handle: '',
-        location: 'El Rubio de Utrera, 1975',
+        location: 'Utrera, 1975',
         borderColor: '#FFDABA',
         gradient: 'linear-gradient(225deg, #FF6200, #000000)',
-        bio: 'El rubio de la orquesta y el que tiene a la gente cantando desde el primer tema. Lo mismo te canta a Bisbal que te mete reggaeton como si hubiera nacío en San Juan. Energía contagiosa, eso no le falta.'
+        bio: 'La imagen de la orquesta y el que tiene a la gente cantando desde el primer tema. Lo mismo te canta a Bisbal que te mete reggaeton como si hubiera nacío en Puerto Rico. Energía contagiosa, eso no le falta.'
     },
     {
         id: 'sergio-take',
