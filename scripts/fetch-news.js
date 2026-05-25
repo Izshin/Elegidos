@@ -78,16 +78,48 @@ async function fetchNews() {
 
             const title = post.text ? post.text.split('\n')[0].substring(0, 50) + (post.text.length > 50 ? '...' : '') : '¡Elegidos en directo!';
 
-            let imageUrl = post.imageUrl || post.thumbnailUrl || post.mediaUrl || post.thumb;
+            // Helper: reject video stream URLs that can't be displayed as images
+            const isVideoUrl = (url) => url && /\.(mp4|webm|mov|avi|mkv)(\?|$)/i.test(url);
 
-            // Check for media array (common in Apify Facebook scraper for videos/albums)
+            let imageUrl = null;
+
+            // Direct image fields (skip if it's a video URL)
+            const rawDirect = post.imageUrl || post.thumbnailUrl || post.mediaUrl || post.thumb;
+            if (rawDirect && !isVideoUrl(rawDirect)) {
+                imageUrl = rawDirect;
+            }
+
+            // Media array — covers albums, videos (thumbnail), carousels
             if (!imageUrl && post.media && Array.isArray(post.media) && post.media.length > 0) {
-                const mediaItem = post.media[0];
-                imageUrl = mediaItem.photo_image?.uri ||
-                    mediaItem.thumbnailImage?.uri ||
-                    mediaItem.thumbnail ||
-                    mediaItem.image?.uri ||
-                    mediaItem.preferred_thumbnail?.image?.uri;
+                for (const mediaItem of post.media) {
+                    const candidate =
+                        mediaItem.photo_image?.uri ||
+                        mediaItem.image?.uri ||
+                        mediaItem.thumbnailImage?.uri ||
+                        mediaItem.preferred_thumbnail?.image?.uri ||
+                        mediaItem.previewImage?.uri ||
+                        mediaItem.thumbnail ||
+                        mediaItem.video?.thumbnail_url ||
+                        mediaItem.video_info?.thumbnail_url ||
+                        mediaItem.thumbnails?.[0]?.uri ||
+                        mediaItem.thumbnails?.[0]?.url;
+                    if (candidate && !isVideoUrl(candidate)) {
+                        imageUrl = candidate;
+                        break;
+                    }
+                }
+            }
+
+            // Link/shared post preview image
+            if (!imageUrl) {
+                imageUrl =
+                    post.link?.image?.uri ||
+                    post.link?.picture ||
+                    post.sharedPost?.imageUrl ||
+                    post.attachments?.[0]?.media?.image?.uri ||
+                    post.attachments?.[0]?.media?.photo_image?.uri ||
+                    null;
+                if (isVideoUrl(imageUrl)) imageUrl = null;
             }
 
             let localImagePath = null;
@@ -97,10 +129,8 @@ async function fetchNews() {
                 const success = await downloadImage(imageUrl, imagePath);
                 if (success) {
                     localImagePath = `/news-images/${imageName}`;
-                } else {
-                    // Fallback to original URL if download fails (though it might be broken)
-                    localImagePath = imageUrl;
                 }
+                // If download fails, leave localImagePath as null — card will render without image
             }
 
             const excerpt = post.text
