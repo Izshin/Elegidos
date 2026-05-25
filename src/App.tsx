@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import OrquestaPage from './pages/OrquestaPage'
 import TourPage from './pages/TourPage'
@@ -13,6 +14,7 @@ import MemberProfile from './pages/MemberProfile'
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
       <div className="app">
         <Header />
         <main>

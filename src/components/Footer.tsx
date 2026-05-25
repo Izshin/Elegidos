@@ -20,6 +20,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/orquestaelegidos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <img src={import.meta.env.BASE_URL + 'images/ig.svg'} alt="Instagram" className="social-icon" />
               </a>
+              <a href="https://www.tiktok.com/@orquestaelegidos" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <img src={import.meta.env.BASE_URL + 'images/tiktok.svg'} alt="TikTok" className="social-icon" />
+              </a>
             </div>
           </div>
 
