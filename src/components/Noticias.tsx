@@ -3,6 +3,27 @@ import { motion } from 'framer-motion';
 import { fetchFacebookPosts, type NewsItem } from '../services/apifyService';
 import './Noticias.css';
 
+const MAX_TITLE_FROM_LINE = 80;
+
+const FALLBACK_TITLES = ['Publicación de Facebook'];
+const FALLBACK_EXCERPTS = ['Ver publicación en Facebook...'];
+
+const getDisplayContent = (item: NewsItem) => {
+  const rawTitle = FALLBACK_TITLES.includes(item.title) ? '¡Elegidos en directo!' : item.title;
+  const rawExcerpt = FALLBACK_EXCERPTS.includes(item.excerpt)
+    ? 'Un momento que no te puedes perder. Entra a ver la publicación completa.'
+    : item.excerpt;
+
+  const firstNewline = rawExcerpt.indexOf('\n');
+  if (firstNewline > 0) {
+    const firstLine = rawExcerpt.slice(0, firstNewline).trim();
+    const body = rawExcerpt.slice(firstNewline + 1).trim();
+    const title = firstLine.length <= MAX_TITLE_FROM_LINE ? firstLine : rawTitle;
+    return { title, body };
+  }
+  return { title: rawTitle, body: rawExcerpt };
+};
+
 const Noticias = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,7 +81,10 @@ const Noticias = () => {
           </div>
         ) : (
           <div className="news-grid">
-            {news.map((item, index) => (
+            {news.map((item, index) => {
+              const { title, body } = getDisplayContent(item);
+              const displayBody = !item.image && body.length > 450 ? body.slice(0, 450) + '…' : body;
+              return (
               <motion.article
                 key={item.id}
                 className={`news-card${!item.image ? ' news-card--no-image' : ''}`}
@@ -92,12 +116,13 @@ const Noticias = () => {
                   <div className="news-header">
                     <span className="news-date">{item.date}</span>
                   </div>
-                  <h3>{item.title}</h3>
-                  <p>{!item.image && item.excerpt.length > 450 ? item.excerpt.slice(0, 450) + '…' : item.excerpt}</p>
+                  <h3>{title}</h3>
+                  <p>{displayBody}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more">Leer más →</a>
                 </div>
               </motion.article>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

@@ -76,7 +76,7 @@ async function fetchNews() {
                     year: 'numeric',
                 }).toUpperCase();
 
-            const title = post.text ? post.text.split('\n')[0].substring(0, 50) + (post.text.length > 50 ? '...' : '') : 'Publicación de Facebook';
+            const title = post.text ? post.text.split('\n')[0].substring(0, 50) + (post.text.length > 50 ? '...' : '') : '¡Elegidos en directo!';
 
             let imageUrl = post.imageUrl || post.thumbnailUrl || post.mediaUrl || post.thumb;
 
@@ -105,7 +105,7 @@ async function fetchNews() {
 
             const excerpt = post.text
                 ? (localImagePath ? post.text.substring(0, 100) + (post.text.length > 100 ? '...' : '') : post.text)
-                : 'Ver publicación en Facebook...';
+                : 'Un momento que no te puedes perder. Entra a ver la publicación completa.';
 
             return {
                 id: index + 1,
