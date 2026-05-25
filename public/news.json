@@ -1,15 +1,33 @@
 [
   {
     "id": 1,
+    "title": "GRACIAS!!!...",
+    "date": "25 MAY 2026",
+    "excerpt": "GRACIAS!!!\nNoche espectacular en el Auditorio Los del Río.\nDos Hermanas.",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/reel/1667168307943181/",
+    "image": "/news-images/post-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Estos días…",
+    "date": "25 MAY 2026",
+    "excerpt": "Estos días…\nNos vemos en la Feria de Gerena.",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid024nCA7hfc2MmhsJTwdbh7aVQQz7Sz4jX11k94CTGyZzGzo3PMu4uVwSTd5pc6NyhFl",
+    "image": "/news-images/post-2.jpg"
+  },
+  {
+    "id": 3,
     "title": "Lo de anoche en Dos Hermanas superó por completo n...",
     "date": "24 MAY 2026",
     "excerpt": "Lo de anoche en Dos Hermanas superó por completo nuestras espectativas. \nGracias a todos los que acu...",
     "category": "Facebook",
     "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0JqmtwDHagLdqjTNvmLZSocPUywGu9eP3NLRoFMuaYtoqNocyJ9sWJrFdZjGzJq83l",
-    "image": "/news-images/post-1.jpg"
+    "image": "/news-images/post-3.jpg"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "¿¿¿Y ahora qué hacemos con vosotros Utrera???...",
     "date": "23 MAY 2026",
     "excerpt": "¿¿¿Y ahora qué hacemos con vosotros Utrera???\nGRACIAS en mayúsculas por acompañarnos anoche en nuestro 30 Aniversario y llenar el patio de San Diego del Colegio Salesianos. \nFue una noche especial y como siempre respondisteis superándoos. \nA todos los que nos echaron un cable (ya saben quiénes son y es una lista inmensa) decirles que sin ellos no hubiese sido posible esto. \nY a los invitados, gracias por vuestras sorpresas, vuestros regalos y sobre todo por vuestro cariño. Nos hacéis sentir queridos para aguantar 30 años más…\nSiempre estaremos en deuda con todos porque estos son los momentos que nos vamos a llevar al final del todo y estos algo que nunca se olvida.\nYa estamos contando las horas para la próxima vez que coincidamos. \nHasta la próxima!!!",
@@ -18,39 +36,21 @@
     "image": null
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Seguimos celebrando nuestro 30 Aniversario, nada m...",
     "date": "23 MAY 2026",
     "excerpt": "Seguimos celebrando nuestro 30 Aniversario, nada mejor que estrenando nueva red social.\nIremos subie...",
     "category": "Facebook",
     "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0oEfRdSgxVcUQYt4yr1XxWF9HCgLueMiy5NBwnXP17oD74QgvBGZdWEDZ61AVoTGKl",
-    "image": "/news-images/post-3.jpg"
+    "image": "/news-images/post-5.jpg"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "La nueva generación de Elegidos viene pisando muy ...",
     "date": "23 MAY 2026",
     "excerpt": "La nueva generación de Elegidos viene pisando muy fuerte!!!…🥁🎸🎼",
     "category": "Facebook",
     "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02PA5nrWEs54NfVDtUE4X7fDLUG1pe46w4269S7QajPdqRFZUjK5PTQN1uJe4EfaeSl",
-    "image": "/news-images/post-4.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Y llegó el día por fin!!!!…os esperamos a tod@s es...",
-    "date": "22 MAY 2026",
-    "excerpt": "Y llegó el día por fin!!!!…os esperamos a tod@s esta noche a las 22:30 en el Colegio de los Salesian...",
-    "category": "Facebook",
-    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02oBVg4LuL8ykAFYG3icjKAih2euAsp4vn7z5PKTcGe2drcixQ9VUbJNPCbDD2YnUsl",
-    "image": "/news-images/post-5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Publicación de Facebook",
-    "date": "21 MAY 2026",
-    "excerpt": "Ver publicación en Facebook...",
-    "category": "Facebook",
-    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid0TrzyxCDpVsCz3r86aLL6RL62DcwtaRiFf21cTp1GNYj4TCxZF4eEK1XurLD4mwuul",
     "image": "/news-images/post-6.jpg"
   }
 ]
