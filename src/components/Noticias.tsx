@@ -63,7 +63,7 @@ const Noticias = () => {
             {news.map((item, index) => (
               <motion.article
                 key={item.id}
-                className="news-card"
+                className={`news-card${!item.image ? ' news-card--no-image' : ''}`}
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -93,7 +93,7 @@ const Noticias = () => {
                     <span className="news-date">{item.date}</span>
                   </div>
                   <h3>{item.title}</h3>
-                  <p>{item.excerpt}</p>
+                  <p>{!item.image && item.excerpt.length > 450 ? item.excerpt.slice(0, 450) + '…' : item.excerpt}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more">Leer más →</a>
                 </div>
               </motion.article>

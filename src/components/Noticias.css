@@ -35,15 +35,25 @@
 
 .news-image {
   width: 100%;
-  height: 200px;
   background-color: #000;
-  overflow: hidden;
 }
 
 .news-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .news-image {
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .news-image img {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .news-content {
@@ -95,8 +105,16 @@
   text-decoration: underline;
 }
 
+.news-card--no-image .news-content {
+  min-height: 260px;
+}
+
 @media (max-width: 768px) {
   .news-grid {
     grid-template-columns: 1fr;
+  }
+
+  .news-card--no-image .news-content {
+    min-height: unset;
   }
 }
