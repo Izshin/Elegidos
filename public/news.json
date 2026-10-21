@@ -19,38 +19,38 @@
   },
   {
     "id": 3,
+    "title": "Feliz Domingo !!!…Aitana 🎼🎼🎼",
+    "date": "18 OCT 2026",
+    "excerpt": "Feliz Domingo !!!…Aitana 🎼🎼🎼",
+    "category": "Facebook",
+    "link": "https://www.facebook.com/reel/2341890836615828/",
+    "image": "/news-images/post-3.jpg"
+  },
+  {
+    "id": 4,
     "title": "ELEGIDOS.",
     "date": "15 OCT 2026",
     "excerpt": "ELEGIDOS.",
     "category": "Facebook",
     "link": "https://www.facebook.com/reel/1538601678303319/",
-    "image": "/news-images/post-3.jpg"
+    "image": "/news-images/post-4.jpg"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Este sábado 17, estaremos presentes en el Festival...",
     "date": "13 OCT 2026",
     "excerpt": "Este sábado 17, estaremos presentes en el Festival Benéfico que se celebrará en la Plaza de toros de...",
     "category": "Facebook",
     "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02Sys3E1j6DUUNuDhVwWtbspXG67xPaQ1jvy4dgX7A6ARRrvoS7dxLGsLSHsh5FBwml",
-    "image": "/news-images/post-4.jpg"
+    "image": "/news-images/post-5.jpg"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Y con la Feria de El Cuervo finalizamos oficialmen...",
     "date": "11 OCT 2026",
     "excerpt": "Y con la Feria de El Cuervo finalizamos oficialmente nuestra temporada de ferias. Infinitas gracias ...",
     "category": "Facebook",
     "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02r8GrfCvojbYBVgGDNje3UyAhZLpTk1DAvJh3HzQbe2CtxhZuJZCPXzhMijd79ZTzl",
-    "image": "/news-images/post-5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Y como es tradición, volvemos a cerrar temporada e...",
-    "date": "7 OCT 2026",
-    "excerpt": "Y como es tradición, volvemos a cerrar temporada en El Cuervo. Regresamos a nuestra Caseta 7 de Octu...",
-    "category": "Facebook",
-    "link": "https://www.facebook.com/orquesta.elegidos/posts/pfbid02W8MSTSFPgVo4dmhVaN6RSSVrQQjetRF1664KCt7kiR9CHtzDMBTX5ETBM88sPc4zl",
     "image": "/news-images/post-6.jpg"
   }
 ]
